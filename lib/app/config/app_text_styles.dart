@@ -65,6 +65,10 @@ class AppTextStyles {
       fontFamily: 'PretendardMedium',
       fontSize: 22,
       fontWeight: FontWeight.w500);
+  static TextStyle M24 = const TextStyle(
+      fontFamily: 'PretendardMedium',
+      fontSize: 24,
+      fontWeight: FontWeight.w500);
   static TextStyle M28 = const TextStyle(
       fontFamily: 'PretendardMedium',
       fontSize: 28,

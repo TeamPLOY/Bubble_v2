@@ -65,6 +65,14 @@ class AppTextStyles {
       fontFamily: 'PretendardMedium',
       fontSize: 22,
       fontWeight: FontWeight.w500);
+  static TextStyle M24 = const TextStyle(
+      fontFamily: 'PretendardMedium',
+      fontSize: 24,
+      fontWeight: FontWeight.w500);
+  static TextStyle M28 = const TextStyle(
+      fontFamily: 'PretendardMedium',
+      fontSize: 28,
+      fontWeight: FontWeight.w500);
   static TextStyle M30 = const TextStyle(
       fontFamily: 'PretendardMedium',
       fontSize: 30,
@@ -103,6 +111,10 @@ class AppTextStyles {
   static TextStyle S24 = const TextStyle(
       fontFamily: 'PretendardSemiBold',
       fontSize: 24,
+      fontWeight: FontWeight.w600);
+  static TextStyle S28 = const TextStyle(
+      fontFamily: 'PretendardSemiBold',
+      fontSize: 28,
       fontWeight: FontWeight.w600);
 
 // Bold

@@ -1,3 +1,4 @@
+import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +10,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      theme: ThemeData(
+        textSelectionTheme: TextSelectionThemeData(
+          cursorColor: AppColor.gray700,
+          selectionColor: AppColor.gray300.withOpacity(0.4),
+          selectionHandleColor:AppColor.gray300
+        )
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -39,9 +39,9 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 40,),
                 
                 //Input
-                Inputform(Ispassword: false, TitleText: '이메일 주소', controller: emailController, hintText: '이메일 주소를 입력해주세요.'),
+                Inputform(ispassword: false, titleText: '이메일 주소', controller: emailController, hintText: '이메일 주소를 입력해주세요.'),
                 const SizedBox(height: 20,),
-                Inputform(Ispassword: true, TitleText: '비밀번호', controller: passwodController, hintText: '비밀번호 입력해주세요.'),
+                Inputform(ispassword: true, titleText: '비밀번호', controller: passwodController, hintText: '비밀번호 입력해주세요.'),
                 const SizedBox(height: 12,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,

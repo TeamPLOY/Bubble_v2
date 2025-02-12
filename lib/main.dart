@@ -1,6 +1,7 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/presentation/page/signUp.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,7 +12,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
         textSelectionTheme: TextSelectionThemeData(
           cursorColor: AppColor.gray700,

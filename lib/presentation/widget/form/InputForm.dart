@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Inputform extends StatefulWidget {
-  final String TitleText;
+  final String titleText;
   final TextEditingController controller;
   final String hintText;
-  final bool Ispassword;
+  final bool ispassword;
   
-  const Inputform({required this.Ispassword,required this.TitleText,required this.controller,required this.hintText,super.key});
+  const Inputform({required this.ispassword,required this.titleText,required this.controller,required this.hintText,super.key});
 
   @override
   State<Inputform> createState() => _InputformState();
@@ -20,7 +20,7 @@ class _InputformState extends State<Inputform> {
 
   @override
   void initState() {
-    isObscureText=widget.Ispassword;
+    isObscureText=widget.ispassword;
     super.initState();
   }
 
@@ -29,7 +29,7 @@ class _InputformState extends State<Inputform> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(widget.TitleText,style: AppTextStyles.M16.copyWith(color: AppColor.gray900),),
+        Text(widget.titleText,style: AppTextStyles.M16.copyWith(color: AppColor.gray900),),
         const SizedBox(height: 8,),
         //TextFieldForm
         Container(
@@ -37,6 +37,7 @@ class _InputformState extends State<Inputform> {
             borderRadius: BorderRadius.circular(4),
             border: Border.all(color: AppColor.gray300,width: 1),
           ),
+          height: 44,
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Row(
             children: [
@@ -62,7 +63,7 @@ class _InputformState extends State<Inputform> {
                     isObscureText=!isObscureText;
                   });
                 },
-                child: widget.Ispassword?isObscureText?SvgPicture.asset('assets/images/eyes.svg'):SvgPicture.asset('assets/images/open_eyes.svg'):const SizedBox()
+                child: widget.ispassword?isObscureText?SvgPicture.asset('assets/images/eyes.svg'):SvgPicture.asset('assets/images/open_eyes.svg'):const SizedBox()
               )
             ],
           ),

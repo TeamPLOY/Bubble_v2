@@ -107,7 +107,10 @@ class AppTextStyles {
       fontFamily: 'PretendardSemiBold',
       fontSize: 18,
       fontWeight: FontWeight.w600);
-
+  static TextStyle S20 = const TextStyle(
+      fontFamily: 'PretendardSemiBold',
+      fontSize: 20,
+      fontWeight: FontWeight.w600);
   static TextStyle S24 = const TextStyle(
       fontFamily: 'PretendardSemiBold',
       fontSize: 24,

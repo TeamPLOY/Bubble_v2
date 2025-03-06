@@ -6,6 +6,8 @@ import 'package:bubble_v2/presentation/widget/components/button/graybutton.dart'
 import 'package:bubble_v2/presentation/widget/components/signUp/TitleText.dart';
 import 'package:bubble_v2/presentation/widget/components/signUp/dropDown.dart';
 import 'package:bubble_v2/presentation/widget/form/signForm.dart';
+import 'package:bubble_v2/presentation/widget/header/Noheader.dart';
+import 'package:bubble_v2/presentation/widget/header/header.dart';
 import 'package:bubble_v2/presentation/widget/header/noHeader.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

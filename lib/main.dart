@@ -1,4 +1,5 @@
 import 'package:bubble_v2/app/config/app_color.dart';
+import 'package:bubble_v2/presentation/page/notice.dart';
 import 'package:bubble_v2/presentation/page/signUp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,7 +22,7 @@ class MainApp extends StatelessWidget {
         )
       ),
       debugShowCheckedModeBanner: false,
-      home: SignUpPage(),
+      home: Notice(),
     );
   }
 }

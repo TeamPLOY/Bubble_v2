@@ -9,6 +9,7 @@ class NoHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        color: AppColor.white100,
         border: Border(bottom: BorderSide(color: AppColor.gray100,width: 1))
       ),
       child: Row(

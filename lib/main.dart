@@ -1,5 +1,7 @@
 import 'package:bubble_v2/app/config/app_color.dart';
+import 'package:bubble_v2/presentation/page/login.dart';
 import 'package:bubble_v2/presentation/page/notice.dart';
+import 'package:bubble_v2/presentation/page/noticeDetail.dart';
 import 'package:bubble_v2/presentation/page/signUp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,8 +23,14 @@ class MainApp extends StatelessWidget {
           selectionHandleColor:AppColor.gray300
         )
       ),
+      getPages: [
+        GetPage(name: '/Login', page: ()=>LoginPage()),
+        GetPage(name: '/SignUp', page: ()=>SignUpPage()),
+        GetPage(name: '/Notice', page: ()=>NoticePage()),
+        GetPage(name: '/NoticeDetail/:id', page: ()=>NoticeDetailPage())
+      ],
       debugShowCheckedModeBanner: false,
-      home: Notice(),
+      initialRoute: '/Notice',
     );
   }
 }

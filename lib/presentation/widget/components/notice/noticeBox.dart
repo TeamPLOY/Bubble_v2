@@ -14,9 +14,8 @@ class Noticebox extends StatelessWidget {
         color: AppColor.white100,
         border: Border(bottom: BorderSide(color: AppColor.gray300,width: 1))
       ),
-      height: 105,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 26),
         child: Row(
           children: [
             Expanded(

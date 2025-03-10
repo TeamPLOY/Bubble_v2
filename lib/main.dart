@@ -2,6 +2,8 @@ import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/presentation/page/login.dart';
 import 'package:bubble_v2/presentation/page/notice.dart';
 import 'package:bubble_v2/presentation/page/noticeDetail.dart';
+import 'package:bubble_v2/presentation/page/psChange/psChange.dart';
+import 'package:bubble_v2/presentation/page/psChange/psChangeEmail.dart';
 import 'package:bubble_v2/presentation/page/signUp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,12 +27,14 @@ class MainApp extends StatelessWidget {
       ),
       getPages: [
         GetPage(name: '/Login', page: ()=>LoginPage()),
-        GetPage(name: '/SignUp', page: ()=>SignUpPage()),
-        GetPage(name: '/Notice', page: ()=>NoticePage()),
-        GetPage(name: '/NoticeDetail/:id', page: ()=>NoticeDetailPage())
+        GetPage(name: '/SignUp', page: ()=>const SignUpPage()),
+        GetPage(name: '/Notice', page: ()=>const NoticePage()),
+        GetPage(name: '/NoticeDetail/:id', page: ()=>NoticeDetailPage()),
+        GetPage(name: '/PsChangeEmail', page:()=> Pschangeemail()),
+        GetPage(name: '/PsChange', page:()=> Pschange())
       ],
       debugShowCheckedModeBanner: false,
-      initialRoute: '/Notice',
+      initialRoute: '/PsChangeEmail',
     );
   }
 }

@@ -12,6 +12,10 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: AppColor.white100,
+        border: Border(bottom: BorderSide(color: AppColor.gray100,width: 1))
+      ),
       height: 50,
       child: Stack(
         children: [

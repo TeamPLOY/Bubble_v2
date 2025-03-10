@@ -16,6 +16,7 @@ class NoticeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.white100,
       body: Column(
         children: [
           const Header(text: '공지사항',url: 'Notice',),

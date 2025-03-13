@@ -1,6 +1,7 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/presentation/page/alram.dart';
 import 'package:bubble_v2/presentation/page/login.dart';
+import 'package:bubble_v2/presentation/page/my.dart';
 import 'package:bubble_v2/presentation/page/notice.dart';
 import 'package:bubble_v2/presentation/page/noticeDetail.dart';
 import 'package:bubble_v2/presentation/page/psChange/psChange.dart';
@@ -33,10 +34,11 @@ class MainApp extends StatelessWidget {
         GetPage(name: '/NoticeDetail/:id', page: ()=>NoticeDetailPage()),
         GetPage(name: '/PsChangeEmail', page:()=> Pschangeemail()),
         GetPage(name: '/PsChange', page:()=> Pschange()),
-        GetPage(name: '/Alram', page: ()=> AlramPage())
+        GetPage(name: '/Alram', page: ()=> const AlramPage()),
+        GetPage(name: '/My', page: ()=>const MyPage())
       ],
       debugShowCheckedModeBanner: false,
-      initialRoute: '/Alram',
+      initialRoute: '/My',
     );
   }
 }

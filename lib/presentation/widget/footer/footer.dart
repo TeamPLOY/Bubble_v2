@@ -2,6 +2,7 @@ import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class Footer extends StatelessWidget {
   final int isClick;
@@ -43,7 +44,9 @@ class Footer extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: (){},
+              onTap: (){
+                Get.toNamed('/Notice');
+              },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -54,7 +57,7 @@ class Footer extends StatelessWidget {
             ),
             GestureDetector(
               onTap: (){
-                
+                Get.toNamed('/My');
               },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

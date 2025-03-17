@@ -131,6 +131,8 @@ class AppTextStyles {
       fontFamily: 'PretendardBold', fontSize: 18, fontWeight: FontWeight.w700);
   static TextStyle B20 = const TextStyle(
       fontFamily: 'PretendardBold', fontSize: 20, fontWeight: FontWeight.w700);
+  static TextStyle B24 = const TextStyle(
+      fontFamily: 'PretendardBold', fontSize: 24, fontWeight: FontWeight.w700);
   static TextStyle B28 = const TextStyle(
       fontFamily: 'PretendardBold', fontSize: 28, fontWeight: FontWeight.w700);
 

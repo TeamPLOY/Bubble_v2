@@ -57,7 +57,7 @@ class _TermsPageState extends State<TermsPage> {
                         padding: const EdgeInsets.only(left:18,top: 10,bottom: 10),
                         child: Row(
                           children: [
-                            termController.isClick[0]&&termController.isClick[1]?SvgPicture.asset('assets/images/terms/blue.svg'):SvgPicture.asset('assets/images/terms/every.svg'),
+                            termController.isClick[0]&&termController.isClick[1]?SvgPicture.asset('assets/images/terms/whiteCheck.svg'):SvgPicture.asset('assets/images/terms/every.svg'),
                             const SizedBox(width: 8,),
                             Text('전체 동의하기',style: AppTextStyles.M18.copyWith(color: termController.isClick[0]&&termController.isClick[1]?AppColor.white100:AppColor.gray700),),
                             const SizedBox(width: 4,),

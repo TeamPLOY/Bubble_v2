@@ -24,6 +24,7 @@ flutter:
     - assets/images/
     - assets/images/footer/
     - assets/images/my/
+    - assets/images/terms/
 
   fonts:
     - family: PretendardBold

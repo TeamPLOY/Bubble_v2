@@ -7,6 +7,7 @@ import 'package:bubble_v2/presentation/page/noticeDetail.dart';
 import 'package:bubble_v2/presentation/page/psChange/psChange.dart';
 import 'package:bubble_v2/presentation/page/psChange/psChangeEmail.dart';
 import 'package:bubble_v2/presentation/page/signUp.dart';
+import 'package:bubble_v2/presentation/page/terms.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -35,10 +36,11 @@ class MainApp extends StatelessWidget {
         GetPage(name: '/PsChangeEmail', page:()=> Pschangeemail()),
         GetPage(name: '/PsChange', page:()=> Pschange()),
         GetPage(name: '/Alram', page: ()=> const AlramPage()),
-        GetPage(name: '/My', page: ()=>const MyPage())
+        GetPage(name: '/My', page: ()=>const MyPage()),
+        GetPage(name: '/Terms', page:()=> TermsPage())
       ],
       debugShowCheckedModeBanner: false,
-      initialRoute: '/My',
+      initialRoute: '/Terms',
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:bubble_v2/presentation/page/login.dart';
 import 'package:bubble_v2/presentation/page/my.dart';
 import 'package:bubble_v2/presentation/page/notice.dart';
 import 'package:bubble_v2/presentation/page/noticeDetail.dart';
+import 'package:bubble_v2/presentation/page/onBoarding.dart';
 import 'package:bubble_v2/presentation/page/psChange/psChange.dart';
 import 'package:bubble_v2/presentation/page/psChange/psChangeEmail.dart';
 import 'package:bubble_v2/presentation/page/signUp.dart';
@@ -37,10 +38,11 @@ class MainApp extends StatelessWidget {
         GetPage(name: '/PsChange', page:()=> Pschange()),
         GetPage(name: '/Alram', page: ()=> const AlramPage()),
         GetPage(name: '/My', page: ()=>const MyPage()),
-        GetPage(name: '/Terms', page:()=> TermsPage())
+        GetPage(name: '/Terms', page:()=>const TermsPage()),
+        GetPage(name: '/OnBoarding', page: ()=>const OnboardingPage())
       ],
       debugShowCheckedModeBanner: false,
-      initialRoute: '/Terms',
+      initialRoute: '/OnBoarding',
     );
   }
 }

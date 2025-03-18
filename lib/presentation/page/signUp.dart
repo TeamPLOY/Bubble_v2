@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
-import 'package:bubble_v2/app/controller/dropdownData.dart';
+import 'package:bubble_v2/util/dropdownData.dart';
 import 'package:bubble_v2/presentation/widget/components/button/graybutton.dart';
 import 'package:bubble_v2/presentation/widget/components/signUp/TitleText.dart';
 import 'package:bubble_v2/presentation/widget/components/signUp/dropDown.dart';

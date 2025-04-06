@@ -2,11 +2,11 @@ import 'dart:async';
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
 import 'package:bubble_v2/util/dropdownData.dart';
-import 'package:bubble_v2/presentation/widget/components/button/graybutton.dart';
-import 'package:bubble_v2/presentation/widget/components/signUp/TitleText.dart';
-import 'package:bubble_v2/presentation/widget/components/signUp/dropDown.dart';
-import 'package:bubble_v2/presentation/widget/form/signForm.dart';
-import 'package:bubble_v2/presentation/widget/header/Noheader.dart';
+import 'package:bubble_v2/presentation/widgets/components/button/graybutton.dart';
+import 'package:bubble_v2/presentation/widgets/components/signUp/TitleText.dart';
+import 'package:bubble_v2/presentation/widgets/components/signUp/dropDown.dart';
+import 'package:bubble_v2/presentation/widgets/form/signForm.dart';
+import 'package:bubble_v2/presentation/widgets/header/Noheader.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

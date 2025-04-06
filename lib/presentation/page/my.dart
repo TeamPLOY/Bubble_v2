@@ -1,7 +1,7 @@
 import 'package:bubble_v2/app/config/app_color.dart';
-import 'package:bubble_v2/presentation/widget/components/my/columnText.dart';
-import 'package:bubble_v2/presentation/widget/footer/footer.dart';
-import 'package:bubble_v2/presentation/widget/header/Header.dart';
+import 'package:bubble_v2/presentation/widgets/components/my/columnText.dart';
+import 'package:bubble_v2/presentation/widgets/footer/footer.dart';
+import 'package:bubble_v2/presentation/widgets/header/Header.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

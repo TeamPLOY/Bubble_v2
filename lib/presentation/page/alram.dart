@@ -1,6 +1,6 @@
 import 'package:bubble_v2/app/config/app_color.dart';
-import 'package:bubble_v2/presentation/widget/components/alram/alrambox.dart';
-import 'package:bubble_v2/presentation/widget/header/Header.dart';
+import 'package:bubble_v2/presentation/widgets/components/alram/alrambox.dart';
+import 'package:bubble_v2/presentation/widgets/header/Header.dart';
 import 'package:flutter/material.dart';
 
 class AlramPage extends StatefulWidget {

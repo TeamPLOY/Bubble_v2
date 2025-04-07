@@ -20,31 +20,52 @@ class HomePage extends StatelessWidget {
             // 타이틀 영역
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "세탁실 B32",
-                    style: AppTextStyles.B20.copyWith(color: AppColor.gray800),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    "세탁기 시간을 확인해보세요!",
-                    style: AppTextStyles.M18.copyWith(color: AppColor.gray800),
-                  ),
-                ],
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "세탁실 B32",
+                      style:
+                          AppTextStyles.B20.copyWith(color: AppColor.gray800),
+                      textAlign: TextAlign.left,
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      "세탁기 시간을 확인해보세요!",
+                      style:
+                          AppTextStyles.M18.copyWith(color: AppColor.gray800),
+                      textAlign: TextAlign.left,
+                    ),
+                  ],
+                ),
               ),
             ),
 
-            // 세탁기 리스트
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: ListView(children: const [
-                  MachineBox(name: "세탁기 1", function: true, time: "11:01"),
-                ]),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, // 열의 개수
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 1.7,
+                  ),
+                  itemCount: 8,
+                  itemBuilder: (context, index) {
+                    return const MachineBox(
+                      name: "세탁기 1",
+                      function: true,
+                      time: "11:01",
+                    );
+                  },
+                ),
               ),
             ),
+
             const Footer(isClick: 1),
           ],
         ),

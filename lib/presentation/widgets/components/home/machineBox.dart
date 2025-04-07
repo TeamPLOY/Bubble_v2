@@ -8,16 +8,16 @@ class MachineBox extends StatelessWidget {
   final String time;
 
   const MachineBox({
-    Key? key,
+    super.key,
     required this.name,
     required this.function,
     required this.time,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+      padding: const EdgeInsets.fromLTRB(12, 12, 10, 12),
       decoration: BoxDecoration(
         color: AppColor.white100,
         border: Border.all(color: AppColor.gray200, width: 1),

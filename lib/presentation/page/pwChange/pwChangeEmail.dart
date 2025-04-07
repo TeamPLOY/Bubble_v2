@@ -1,20 +1,20 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
-import 'package:bubble_v2/presentation/widget/components/button/button.dart';
-import 'package:bubble_v2/presentation/widget/form/psIputForm.dart';
-import 'package:bubble_v2/presentation/widget/header/Header.dart';
+import 'package:bubble_v2/presentation/widgets/components/button/button.dart';
+import 'package:bubble_v2/presentation/widgets/form/psIputForm.dart';
+import 'package:bubble_v2/presentation/widgets/header/Header.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Pschangeemail extends StatefulWidget {
+class Pwchangeemail extends StatefulWidget {
 
-  Pschangeemail({super.key});
+  Pwchangeemail({super.key});
 
   @override
-  State<Pschangeemail> createState() => _PschangeemailState();
+  State<Pwchangeemail> createState() => _PschangeemailState();
 }
 
-class _PschangeemailState extends State<Pschangeemail> {
+class _PschangeemailState extends State<Pwchangeemail> {
   bool isEmailEmpty=false;
   TextEditingController passwordEmailChangeController = TextEditingController();
 

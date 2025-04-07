@@ -1,6 +1,6 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
-import 'package:bubble_v2/presentation/widget/header/header.dart';
+import 'package:bubble_v2/presentation/widgets/header/header.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

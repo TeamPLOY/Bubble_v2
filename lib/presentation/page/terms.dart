@@ -1,11 +1,11 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
 import 'package:bubble_v2/controller/termController.dart';
-import 'package:bubble_v2/presentation/widget/components/button/button.dart';
-import 'package:bubble_v2/presentation/widget/components/button/graybutton.dart';
-import 'package:bubble_v2/presentation/widget/components/terms/comment.dart';
-import 'package:bubble_v2/presentation/widget/components/terms/isDropdown.dart';
-import 'package:bubble_v2/presentation/widget/header/Noheader.dart';
+import 'package:bubble_v2/presentation/widgets/components/button/button.dart';
+import 'package:bubble_v2/presentation/widgets/components/button/graybutton.dart';
+import 'package:bubble_v2/presentation/widgets/components/terms/comment.dart';
+import 'package:bubble_v2/presentation/widgets/components/terms/isDropdown.dart';
+import 'package:bubble_v2/presentation/widgets/header/Noheader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';

@@ -13,25 +13,37 @@ class AlramPage extends StatefulWidget {
 class _AlramPageState extends State<AlramPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.white100,
-      body: Column(
-        children: [
-          const Header(text: '알림',url: 'Login',),
-          const SizedBox(height: 20,),
-          Expanded(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppColor.white100,
+        body: Column(
+          children: [
+            const Header(
+              text: '알림',
+              url: 'Login',
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ListView.separated(
-                  separatorBuilder: (context, index) => const SizedBox(height: 20,),
+                  separatorBuilder: (context, index) => const SizedBox(
+                    height: 20,
+                  ),
                   itemCount: 12,
                   itemBuilder: (context, index) {
-                    return const Alrambox(isMachine: true,date: '01.15',);
+                    return const Alrambox(
+                      isMachine: true,
+                      date: '01.15',
+                    );
                   },
                 ),
               ),
             ),
-        ],
+          ],
+        ),
       ),
     );
   }

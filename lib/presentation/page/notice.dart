@@ -15,26 +15,32 @@ class NoticePage extends StatefulWidget {
 class _NoticeState extends State<NoticePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.white100,
-      body: Column(
-        children: [
-          const Header(text: '공지사항',url: 'Login',),
-          Expanded(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppColor.white100,
+        body: Column(
+          children: [
+            const Header(
+              text: '공지사항',
+              url: 'Login',
+            ),
+            Expanded(
               child: ListView.builder(
                 itemCount: 12,
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                    onTap: (){
-                      Get.toNamed('/NoticeDetail/$index');
-                    },
-                    child:Noticebox(title: '[공지] 2025년 을사년 버블 업데이트 안내', date: '2024-12-12')
-                  );
+                      onTap: () {
+                        Get.toNamed('/NoticeDetail/$index');
+                      },
+                      child: const Noticebox(
+                          title: '[공지] 2025년 을사년 버블 업데이트 안내',
+                          date: '2024-12-12'));
                 },
               ),
             ),
-          const Footer(isClick: 3),
-        ],
+            const Footer(isClick: 3),
+          ],
+        ),
       ),
     );
   }

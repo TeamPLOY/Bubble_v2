@@ -1,9 +1,8 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
-import 'package:bubble_v2/presentation/page/home.dart';
-import 'package:bubble_v2/presentation/widgets/components/button/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/route_manager.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
@@ -17,6 +16,7 @@ class OnboardingPage extends StatelessWidget {
           children: [
             Expanded(
               child: Container(
+                width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter, // 180도 방향에 맞게 시작
@@ -39,8 +39,7 @@ class OnboardingPage extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              child: Column(
+            Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
@@ -70,34 +69,42 @@ class OnboardingPage extends StatelessWidget {
                     style: AppTextStyles.R20.copyWith(color: AppColor.gray500),
                   ),
                   const SizedBox(
-                    height: 54,
+                    height: 40,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const HomePage()));
-                        },
-                        child: const Button(
-                          text: '시작하기',
-                        )),
+                  GestureDetector(
+                    onTap: () {
+                      Get.toNamed('/Home');
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 18),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                            color: AppColor.gray400,
+                            width: 1
+                          )
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset('assets/images/bsm.jpg'),
+                            Text(
+                              'BSM으로 계속하기',
+                              style: AppTextStyles.S16.copyWith(color: AppColor.gray900),
+                            ),
+                            const SizedBox()
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                   const SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    '로그인',
-                    style: AppTextStyles.M20.copyWith(color: AppColor.gray900),
-                  ),
-                  const SizedBox(
-                    height: 22,
+                    height: 36,
                   ),
                 ],
               ),
-            )
           ],
         ),
       ),

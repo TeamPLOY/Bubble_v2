@@ -6,8 +6,15 @@ import 'package:bubble_v2/app/config/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class MyPage extends StatelessWidget {
+class MyPage extends StatefulWidget {
   const MyPage({super.key});
+
+  @override
+  State<MyPage> createState() => _MyPageState();
+}
+
+class _MyPageState extends State<MyPage> {
+  final isUpdate = false; //ture가 되면 업데이트 글자가 나와야 함 이건 백엔드나 따로 버전 관리 해야 될듯
 
   @override
   Widget build(BuildContext context) {
@@ -143,13 +150,13 @@ class MyPage extends StatelessWidget {
                                 style: AppTextStyles.R18
                                     .copyWith(color: AppColor.gray800),
                               ),
-                              GestureDetector(
+                              isUpdate?GestureDetector(
                                   onTap: () {},
                                   child: Text(
                                     '업데이트',
                                     style: AppTextStyles.R18
                                         .copyWith(color: AppColor.blue400),
-                                  ))
+                                  )):const SizedBox()
                             ],
                           ),
                         )

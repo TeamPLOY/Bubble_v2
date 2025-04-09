@@ -21,7 +21,7 @@ class Footer extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                Get.toNamed('/home');
+                Get.toNamed('/Home');
               },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

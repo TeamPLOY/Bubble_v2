@@ -40,71 +40,70 @@ class OnboardingPage extends StatelessWidget {
               ),
             ),
             Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const SizedBox(
-                    height: 46,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '버블',
-                        style:
-                            AppTextStyles.B30.copyWith(color: AppColor.gray900),
-                      ),
-                      Text(
-                        '과 함께 세탁실을\n사용해보세요',
-                        style:
-                            AppTextStyles.M30.copyWith(color: AppColor.gray900),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 24,
-                  ),
-                  Text(
-                    '세탁기 예약부터 알림, 조회까지.',
-                    style: AppTextStyles.R20.copyWith(color: AppColor.gray500),
-                  ),
-                  const SizedBox(
-                    height: 40,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Get.toNamed('/Home');
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 18),
-                        decoration: BoxDecoration(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(
+                  height: 46,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '버블',
+                      style:
+                          AppTextStyles.B30.copyWith(color: AppColor.gray900),
+                    ),
+                    Text(
+                      '과 함께 세탁실을\n사용해보세요',
+                      style:
+                          AppTextStyles.M30.copyWith(color: AppColor.gray900),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  '세탁기 예약부터 알림, 조회까지.',
+                  style: AppTextStyles.R20.copyWith(color: AppColor.gray600),
+                ),
+                const SizedBox(
+                  height: 28,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Get.toNamed('/Home');
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 18),
+                      decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          border: Border.all(
-                            color: AppColor.gray400,
-                            width: 1
-                          )
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Image.asset('assets/images/bsm.jpg'),
-                            Text(
-                              'BSM으로 계속하기',
-                              style: AppTextStyles.S16.copyWith(color: AppColor.gray900),
-                            ),
-                            const SizedBox()
-                          ],
-                        ),
+                          border:
+                              Border.all(color: AppColor.gray300, width: 1)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Image.asset('assets/images/bsm.jpg'),
+                          Text(
+                            'BSM으로 계속하기',
+                            style: AppTextStyles.S16
+                                .copyWith(color: AppColor.gray900),
+                          ),
+                          const SizedBox()
+                        ],
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 36,
-                  ),
-                ],
-              ),
+                ),
+                const SizedBox(
+                  height: 36,
+                ),
+              ],
+            ),
           ],
         ),
       ),

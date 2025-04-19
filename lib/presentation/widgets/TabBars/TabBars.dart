@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-class Footer extends StatelessWidget {
+class TabBars extends StatelessWidget {
   final int isClick;
-  const Footer({required this.isClick, super.key});
+  const TabBars({required this.isClick, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,9 @@ class Footer extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.toNamed('/Reservation');
+              },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -85,7 +87,7 @@ class Footer extends StatelessWidget {
                       ? 'assets/images/footer/Bmy.svg'
                       : 'assets/images/footer/my.svg'),
                   Text(
-                    'MY',
+                    '내정보',
                     style: AppTextStyles.R10.copyWith(
                         color:
                             isClick == 4 ? AppColor.blue400 : AppColor.gray900),

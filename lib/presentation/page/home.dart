@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
-import 'package:bubble_v2/presentation/widgets/footer/footer.dart';
 import 'package:bubble_v2/presentation/widgets/header/header.dart';
 import 'package:bubble_v2/presentation/widgets/components/home/machineBox.dart';
+import 'package:bubble_v2/presentation/widgets/TabBars/TabBars.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -20,8 +20,8 @@ class HomePage extends StatelessWidget {
             // 타이틀 영역
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              child: Align(
-                alignment: Alignment.centerLeft,
+              child: Align(alignment: Alignment.centerLeft,
+                
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -66,7 +66,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
 
-            const Footer(isClick: 1),
+            const TabBars(isClick: 1),
           ],
         ),
       ),

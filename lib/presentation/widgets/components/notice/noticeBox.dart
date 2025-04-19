@@ -8,7 +8,7 @@ class Noticebox extends StatelessWidget {
   const Noticebox({required this.title,required this.date,super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return Container(
       decoration: BoxDecoration(
         color: AppColor.white100,
@@ -28,7 +28,7 @@ class Noticebox extends StatelessWidget {
                   Text(date,style: AppTextStyles.M14.copyWith(color: AppColor.gray400),)
                 ],
               ),
-            ),
+            ),  
           ],
         ),
       ),

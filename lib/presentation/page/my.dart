@@ -1,6 +1,7 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/presentation/widgets/components/my/columnText.dart';
-import 'package:bubble_v2/presentation/widgets/footer/footer.dart';
+import 'package:bubble_v2/presentation/widgets/TabBars/TabBars.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:bubble_v2/presentation/widgets/header/Header.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class MyPage extends StatefulWidget {
 }
 
 class _MyPageState extends State<MyPage> {
-  final isUpdate = false; //ture가 되면 업데이트 글자가 나와야 함 이건 백엔드나 따로 버전 관리 해야 될듯
+  final isUpdate = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _MyPageState extends State<MyPage> {
         backgroundColor: AppColor.white100,
         body: Column(
           children: [
-            const Header(text: 'MY'),
+            const Header(text: '내정보'),
             Expanded(
               child: ListView(
                 children: [
@@ -31,64 +32,55 @@ class _MyPageState extends State<MyPage> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
                       children: [
-                        const SizedBox(
-                          height: 24,
-                        ),
-
-                        //큰 박스
+                        const SizedBox(height: 24),
                         Container(
-                            decoration: BoxDecoration(
-                              color: AppColor.gray50,
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 20, vertical: 24),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                          decoration: BoxDecoration(
+                            color: AppColor.gray50,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 24),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    const Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Columntext(
-                                            text: 'A동 427호', title: '호실'),
-                                        Columntext(text: '이정호', title: '이름'),
-                                        SizedBox(),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 20,
-                                    ),
-                                    const Columntext(
-                                        text: 'A동 427호', title: '호실'),
-                                    const SizedBox(
-                                      height: 20,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
-                                      children: [
-                                        const Columntext(
-                                            text: '2023056@bssm.hs.kr',
-                                            title: '이메일 계정'),
-                                        GestureDetector(
-                                            onTap: () {},
-                                            child: Text(
-                                              '로그아웃',
-                                              style: AppTextStyles.R14.copyWith(
-                                                  color: AppColor.gray500),
-                                            ))
-                                      ],
-                                    ),
+                                    Columntext(text: 'A동 427호', title: '호실'),
+                                    Columntext(text: '이정호', title: '이름'),
+                                    SizedBox(),
                                   ],
-                                ))),
-                        const SizedBox(
-                          height: 12,
+                                ),
+                                const SizedBox(height: 20),
+                                const Columntext(text: 'A동 427호', title: '호실'),
+                                const SizedBox(height: 20),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    const Columntext(
+                                        text: '2023056@bssm.hs.kr',
+                                        title: '이메일 계정'),
+                                    GestureDetector(
+                                      onTap: () {},
+                                      child: Text(
+                                        '로그아웃',
+                                        style: AppTextStyles.R14
+                                            .copyWith(color: AppColor.gray500),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
+                        const SizedBox(height: 12),
+
+                        /// ✅ 개인정보처리방침
                         Container(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 20, vertical: 15),
@@ -99,21 +91,41 @@ class _MyPageState extends State<MyPage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                '개인정보 처리방침',
-                                style: AppTextStyles.R18
-                                    .copyWith(color: AppColor.gray800),
+                              GestureDetector(
+                                onTap: () async {
+                                  final url = Uri.parse(
+                                      "https://gleaming-rowboat-9a5.notion.site/1d988971edc980899413e0121a40e1f4?pvs=4");
+
+                                  print("👉 개인정보처리방침 클릭됨");
+
+                                  if (await canLaunchUrl(url)) {
+                                    final launched = await launchUrl(
+                                      url,
+                                      mode: LaunchMode.externalApplication,
+                                    );
+                                    print("✅ launchUrl 실행됨: $launched");
+                                  } else {
+                                    print("❌ 링크 열기 실패");
+                                  }
+                                },
+                                child: Text(
+                                  "개인정보처리방침",
+                                  style: AppTextStyles.R18.copyWith(
+                                    color: AppColor.gray800,
+                                  ),
+                                ),
                               ),
                               GestureDetector(
-                                  onTap: () {},
-                                  child: SvgPicture.asset(
-                                      'assets/images/my/back.svg'))
+                                onTap: () {},
+                                child: SvgPicture.asset(
+                                    'assets/images/my/back.svg'),
+                              ),
                             ],
                           ),
                         ),
-                        const SizedBox(
-                          height: 12,
-                        ),
+                        const SizedBox(height: 12),
+
+                        /// 문의하기
                         Container(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 20, vertical: 15),
@@ -132,9 +144,9 @@ class _MyPageState extends State<MyPage> {
                             ],
                           ),
                         ),
-                        const SizedBox(
-                          height: 12,
-                        ),
+                        const SizedBox(height: 12),
+
+                        /// 문의하기 + 업데이트
                         Container(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 20, vertical: 15),
@@ -150,23 +162,26 @@ class _MyPageState extends State<MyPage> {
                                 style: AppTextStyles.R18
                                     .copyWith(color: AppColor.gray800),
                               ),
-                              isUpdate?GestureDetector(
-                                  onTap: () {},
-                                  child: Text(
-                                    '업데이트',
-                                    style: AppTextStyles.R18
-                                        .copyWith(color: AppColor.blue400),
-                                  )):const SizedBox()
+                              isUpdate
+                                  ? GestureDetector(
+                                      onTap: () {},
+                                      child: Text(
+                                        '업데이트',
+                                        style: AppTextStyles.R18
+                                            .copyWith(color: AppColor.blue400),
+                                      ),
+                                    )
+                                  : const SizedBox()
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
                 ],
               ),
             ),
-            const Footer(isClick: 4),
+            const TabBars(isClick: 4),
           ],
         ),
       ),

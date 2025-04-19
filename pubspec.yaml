@@ -1,6 +1,6 @@
 name: bubble_v2
-description: "A new Flutter project."
-publish_to: "none"
+description: 'A new Flutter project.'
+publish_to: 'none'
 version: 0.1.0
 
 environment:
@@ -9,8 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_linkify: ^6.0.0
   flutter_svg: ^2.0.17
   get: ^4.6.6
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:

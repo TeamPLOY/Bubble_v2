@@ -1,5 +1,7 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
+import 'package:bubble_v2/presentation/page/reservation/reservation_result.dart';
+import 'package:bubble_v2/presentation/widgets/components/button/button.dart';
 import 'package:flutter/material.dart';
 import 'package:bubble_v2/presentation/widgets/header/header.dart';
 import 'package:bubble_v2/presentation/widgets/TabBars/TabBars.dart';
@@ -110,6 +112,19 @@ class ReservationPage extends StatelessWidget {
                               return ReservationMachineBox(
                                 text: "세탁기 ${index + 1}",
                               );
+                            },
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          GestureDetector(
+                            child: const Button(text: "예약하기"),
+                            onTap: () => {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ReservationResult())),
                             },
                           ),
                         ],

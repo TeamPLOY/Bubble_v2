@@ -14,8 +14,7 @@ class _HomebuttonState extends State<Homebutton> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColor.gray200,
-      ),
+          color: AppColor.gray200, borderRadius: BorderRadius.circular(5)),
       child: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 48),

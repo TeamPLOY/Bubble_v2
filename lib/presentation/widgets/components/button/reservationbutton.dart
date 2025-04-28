@@ -14,8 +14,7 @@ class _ReservationbuttonState extends State<Reservationbutton> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColor.blue400,
-      ),
+          color: AppColor.blue400, borderRadius: BorderRadius.circular(5)),
       child: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 48),

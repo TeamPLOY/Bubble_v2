@@ -39,7 +39,8 @@ class MainApp extends StatelessWidget {
         GetPage(name: '/Terms', page: () => const TermsPage()),
         GetPage(name: '/Reservation', page: () => const ReservationPage()),
         GetPage(name: '/OnBoarding', page: () => const OnboardingPage()),
-        GetPage(name: '/Home', page: () => const HomePage())
+        GetPage(name: '/Home', page: () => const HomePage()),
+        GetPage(name: '/ReservationResult', page: () => const ReservationPage())
       ],
       debugShowCheckedModeBanner: false,
       initialRoute: '/OnBoarding',

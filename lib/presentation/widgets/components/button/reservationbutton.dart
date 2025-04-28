@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:bubble_v2/app/config/app_color.dart';
+import 'package:bubble_v2/app/config/app_text_styles.dart';
+
+class Reservationbutton extends StatefulWidget {
+  const Reservationbutton({super.key});
+
+  @override
+  State<Reservationbutton> createState() => _ReservationbuttonState();
+}
+
+class _ReservationbuttonState extends State<Reservationbutton> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColor.blue400,
+      ),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 48),
+          child: Text(
+            "홈으로 가기",
+            style: AppTextStyles.M16.copyWith(color: AppColor.white100),
+          ),
+        ),
+      ),
+    );
+  }
+}

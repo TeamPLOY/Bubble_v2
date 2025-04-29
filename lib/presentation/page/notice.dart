@@ -1,5 +1,5 @@
 import 'package:bubble_v2/app/config/app_color.dart';
-import 'package:bubble_v2/presentation/widgets/components/notice/noticeBox.dart';
+import 'package:bubble_v2/components/notice/noticeBox.dart';
 import 'package:bubble_v2/presentation/widgets/header/header.dart';
 import 'package:bubble_v2/presentation/widgets/TabBars/TabBars.dart';
 import 'package:flutter/material.dart';

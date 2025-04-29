@@ -1,12 +1,12 @@
 import 'package:bubble_v2/presentation/page/home.dart';
-import 'package:bubble_v2/presentation/widgets/components/button/homebutton.dart';
-import 'package:bubble_v2/presentation/widgets/components/button/reservationbutton.dart';
+import 'package:bubble_v2/components/button/homebutton.dart';
+import 'package:bubble_v2/components/button/reservationbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
 import 'package:bubble_v2/presentation/widgets/header/header.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:bubble_v2/presentation/widgets/components/my/columnText.dart';
+import 'package:bubble_v2/components/my/columnText.dart';
 
 class ReservationResult extends StatefulWidget {
   const ReservationResult({super.key});
@@ -50,6 +50,7 @@ class _ReservationResultState extends State<ReservationResult> {
                         style:
                             AppTextStyles.M14.copyWith(color: AppColor.gray500),
                       ),
+                      const SizedBox(height: 20),
                       Container(
                         decoration: BoxDecoration(
                           color: AppColor.gray50,

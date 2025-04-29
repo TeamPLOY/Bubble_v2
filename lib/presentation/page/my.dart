@@ -1,5 +1,5 @@
 import 'package:bubble_v2/app/config/app_color.dart';
-import 'package:bubble_v2/presentation/widgets/components/my/columnText.dart';
+import 'package:bubble_v2/components/my/columnText.dart';
 import 'package:bubble_v2/presentation/widgets/TabBars/TabBars.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:bubble_v2/presentation/widgets/header/Header.dart';

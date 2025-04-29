@@ -37,7 +37,6 @@ class _ReservationDaySelectorState extends State<ReservationDaySelector> {
               Container(
                 height: 3,
                 width: 80,
-                color: isSelected ? AppColor.black : Colors.transparent,
               ),
             ],
           ),

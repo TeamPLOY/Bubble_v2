@@ -7,15 +7,15 @@ import 'package:get/get.dart';
 class Header extends StatelessWidget {
   final String? url;
   final String text;
-  const Header({this.url,required this.text, super.key});
+  const Header({this.url, required this.text, super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColor.white100,
-        border: Border(bottom: BorderSide(color: AppColor.gray100,width: 1))
-      ),
+          color: AppColor.white100,
+          border:
+              Border(bottom: BorderSide(color: AppColor.gray100, width: 1))),
       height: 50,
       child: Stack(
         children: [
@@ -26,14 +26,14 @@ class Header extends StatelessWidget {
             child: Align(
               alignment: Alignment.centerLeft,
               child: GestureDetector(
-                onTap: (){
-                  if (url?.isNotEmpty ?? false) {
-                    Get.toNamed('/$url');
-                  } else {
-                    Get.back();
-                  }
-                },
-                child: SvgPicture.asset('assets/images/back.svg')),
+                  onTap: () {
+                    if (url?.isNotEmpty ?? false) {
+                      Get.toNamed('/$url');
+                    } else {
+                      Get.back();
+                    }
+                  },
+                  child: SvgPicture.asset('assets/icons/back.svg')),
             ),
           ),
           Center(

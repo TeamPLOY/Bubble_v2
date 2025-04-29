@@ -17,7 +17,7 @@ class _ReservationbuttonState extends State<Reservationbutton> {
           color: AppColor.blue400, borderRadius: BorderRadius.circular(5)),
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 38),
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 36),
           child: Text(
             "예약 상세보기",
             style: AppTextStyles.M16.copyWith(color: AppColor.white100),

@@ -1,6 +1,7 @@
 import 'package:bubble_v2/presentation/page/home.dart';
 import 'package:bubble_v2/components/button/homebutton.dart';
 import 'package:bubble_v2/components/button/reservationbutton.dart';
+import 'package:bubble_v2/presentation/page/reservation/reservation_list.dart';
 import 'package:flutter/material.dart';
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
@@ -113,7 +114,7 @@ class _ReservationResultState extends State<ReservationResult> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) =>
-                                        const ReservationResult(),
+                                        const ReservationListPage(),
                                   ),
                                 );
                               }),

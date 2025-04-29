@@ -1,12 +1,12 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
 import 'package:bubble_v2/presentation/page/reservation/reservation_result.dart';
-import 'package:bubble_v2/presentation/widgets/components/button/button.dart';
+import 'package:bubble_v2/components/button/button.dart';
 import 'package:flutter/material.dart';
 import 'package:bubble_v2/presentation/widgets/header/header.dart';
 import 'package:bubble_v2/presentation/widgets/TabBars/TabBars.dart';
-import 'package:bubble_v2/presentation/widgets/components/reservation/reservationMachineBox.dart';
-import 'package:bubble_v2/presentation/widgets/components/reservation/reservationDayBox.dart';
+import 'package:bubble_v2/components/reservation/reservationMachineBox.dart';
+import 'package:bubble_v2/components/reservation/reservationDayBox.dart';
 
 class ReservationPage extends StatelessWidget {
   const ReservationPage({super.key});

@@ -1,6 +1,6 @@
 import 'package:bubble_v2/app/config/app_color.dart';
 import 'package:bubble_v2/app/config/app_text_styles.dart';
-import 'package:bubble_v2/presentation/widgets/components/button/button.dart';
+import 'package:bubble_v2/components/button/button.dart';
 import 'package:bubble_v2/presentation/widgets/form/psIputForm.dart';
 import 'package:bubble_v2/presentation/widgets/header/Header.dart';
 import 'package:flutter/material.dart';
